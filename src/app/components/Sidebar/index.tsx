@@ -38,6 +38,7 @@ const SidebarLink = ({
 const Sidebar = () => {
   const dispatch = useAppDispatch();
   const isSidebarCollapsed = useAppSelector((state) => state.global.isSidebarCollapsed);
+  const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
   const toggleSidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
   }
@@ -50,7 +51,7 @@ const Sidebar = () => {
         <div> Logo </div>
         <h1 className={` ${isSidebarCollapsed ? "hidden" : "block"} font-extrabold text-2xl`}>DEBSTOCK</h1>
         <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={()=> {}}>
-            <Menu className='w-4 h-4'></Menu>
+            <Menu color= {`${isDarkMode ? `bg-white` : 'bg-gray-800'}`} className='w-4 h-4'></Menu>
         </button>
     </div>
     <div className='flex-grow mt-8'>
