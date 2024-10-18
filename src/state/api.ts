@@ -32,6 +32,7 @@ export interface ExpenseByCategorySummary {
     expenseSummaryId: string;
     category: string;
     totalExpense: number;
+    amount: number;
 }
 
 export interface DashboardMetrics {

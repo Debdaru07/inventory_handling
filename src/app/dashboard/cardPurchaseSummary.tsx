@@ -27,24 +27,24 @@ return (
                 <hr />
             </div>
             {/* BODY */}
-                <div>
-                    <div className='mb-4 mt-4 px-7'>
-                        <p className='text-xs text-gray-400'>Purchased</p>
-                        <div className='flex items-center'>
-                            <p className='text-2xl font-bold'>
-                                {lastDataPoint ? numeral(lastDataPoint.totalPurchased).format("$0.00a") : "0"}
+            <div>
+                <div className='mb-2 mt-2 px-7'>
+                    <p className='text-xs text-gray-400'>Purchased</p>
+                    <div className='flex items-center'>
+                        <p className='text-2xl font-bold'>
+                            {lastDataPoint ? numeral(lastDataPoint.totalPurchased).format("$0.00a") : "0"}
+                        </p>
+                        {lastDataPoint && (
+                            <p className={`text-sm ${ lastDataPoint.changePercentage! >=0 ? "text-green-500" : "text-red-500"} flex ml-3`}>
+                                {lastDataPoint.changePercentage! >= 0 ? <TrendingUp className='w-4 h-4'/> : <TrendingDown className='w-4 h-4'/>}
+                                {Math.abs(lastDataPoint.changePercentage!)}%
                             </p>
-                            {lastDataPoint && (
-                                <p className={`text-sm ${ lastDataPoint.changePercentage! >=0 ? "text-green-500" : "text-red-500"} flex ml-3`}>
-                                    {lastDataPoint.changePercentage! >= 0 ? <TrendingUp className='w-4 h-4'/> : <TrendingDown className='w-4 h-4'/>}
-                                    {Math.abs(lastDataPoint.changePercentage!)}%
-                                </p>
-                            )}
-                        </div>
+                        )}
                     </div>
                 </div>
+            </div>
             {/* CHARTS */}
-            <ResponsiveContainer width="100%" height={200} className="p-2">
+            <ResponsiveContainer width="100%" height={200} className="pr-4 p-1">
               <AreaChart
                 data={purchaseData}
                 margin={{ top: 0, right: 0, left: -50, bottom: 45 }}
