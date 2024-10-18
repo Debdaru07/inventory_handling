@@ -52,7 +52,8 @@ const Navbar = () => {
           <span className="font-semibold">Deb Dee</span>
         </div>
       </div>
-      <Link href="/settings"> <Settings className="cursor-pointer text-gray-500"></Settings> </Link>
+      {/* <Link href="/settings"> <Settings className="cursor-pointer text-gray-500"></Settings> </Link> */}
+      <Settings className="cursor-pointer text-gray-500"></Settings>
     </div>
   </div>
 
