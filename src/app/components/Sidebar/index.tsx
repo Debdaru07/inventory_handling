@@ -2,10 +2,9 @@
 
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { setIsSidebarCollapsed } from '@/state';
-import { Archive, CircleDollarSign, Clipboard, Icon, Layout, LucideIcon, Menu, SlidersHorizontal, Users } from 'lucide-react'
+import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, SlidersHorizontal, Users } from 'lucide-react'
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import path from 'path';
 import React from 'react'
 
 interface SidebarLinkProps {
@@ -50,7 +49,7 @@ const Sidebar = () => {
     <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed? "px-5" : "px-8"}`}>
         <div> Logo </div>
         <h1 className={` ${isSidebarCollapsed ? "hidden" : "block"} font-extrabold text-2xl`}>DEBSTOCK</h1>
-        <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={()=> {}}>
+        <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={toggleSidebar}>
             <Menu color= {`${isDarkMode ? `bg-white` : 'bg-gray-800'}`} className='w-4 h-4'></Menu>
         </button>
     </div>

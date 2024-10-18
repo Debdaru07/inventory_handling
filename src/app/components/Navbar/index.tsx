@@ -2,7 +2,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsDarkMode, setIsSidebarCollapsed } from "@/state";
-import { Bell, Link, Menu, Moon, Settings, Sun } from "lucide-react";
+import { Bell, Menu, Moon, Settings, Sun } from "lucide-react";
 import React from "react";
 
 const Navbar = () => {
@@ -17,7 +17,6 @@ const Navbar = () => {
   }
 
   return <div className="flex justify-between items-center w-full mb-7">
-    {/* SideBar Toggler Icon */}
     <div className= {`flex justify-between items-center gap-5`}>
       <button className= { `px-3 py-3 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-100'} round-full hover:bg-blue-100`} onClick={toggleSidebar}>
         <Menu className="w-4 h-4" />
@@ -52,7 +51,6 @@ const Navbar = () => {
           <span className="font-semibold">Deb Dee</span>
         </div>
       </div>
-      {/* <Link href="/settings"> <Settings className="cursor-pointer text-gray-500"></Settings> </Link> */}
       <Settings className="cursor-pointer text-gray-500"></Settings>
     </div>
   </div>
