@@ -2,7 +2,6 @@
 
 import { useCreateProductMutation, useGetProductsQuery } from '@/state/api';
 import React, { useState } from 'react'
-import { GridColDef } from '@mui/x-data-grid';
 import Header from '../components/Header';
 import { PlusCircleIcon, SearchIcon } from 'lucide-react';
 import Rating from '../components/Rating';
