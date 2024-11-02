@@ -17,7 +17,7 @@ type CreateProductModalProps = {
   onCreate: (formData: ProductFormData) => void;
 }
 
-const createProductModal = ({
+const CreateProductModal = ({
   isOpen,
   onClose, 
   onCreate
@@ -138,4 +138,4 @@ const createProductModal = ({
   )
 }
 
-export default createProductModal
+export default CreateProductModal;
