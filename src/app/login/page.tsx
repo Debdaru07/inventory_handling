@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import styles from "../Login.module.css";
-import logo from '../../../../public/assets/logo_perfect.png';
 
 const LoginPage = () => {
   
