@@ -1,0 +1,1 @@
+export const NEXT_PUBLIC_API_BASE_URL= 'http://13.232.51.191:8000';

@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { NEXT_PUBLIC_API_BASE_URL } from "../../config";
 
 export interface Product {
     productId: string;
@@ -59,7 +60,7 @@ export interface User {
 }
 
 export const api = createApi({
-    baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL}),
+    baseQuery: fetchBaseQuery({ baseUrl: NEXT_PUBLIC_API_BASE_URL}),
     reducerPath: "api",
     tagTypes: ["DashboardMetrics", "Products","Users","Expenses"],
     endpoints: (build) => ({
